@@ -5,6 +5,7 @@ import 'package:crypto_currencies/pages/details.dart';
 import 'package:crypto_currencies/widgets/crypto_container.dart';
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class Crypto extends StatefulWidget {
   const Crypto({Key? key}) : super(key: key);
@@ -136,6 +137,27 @@ class _CryptoState extends State<Crypto> with SingleTickerProviderStateMixin {
                 child: const Text(
                   'Market is up',
                   style: kUnmutedColor,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+              child: DefaultTextStyle(
+                style: const TextStyle(
+                  fontSize: 30.0,
+                  fontFamily: 'Agne',
+                ),
+                child: AnimatedTextKit(
+                  pause: const Duration(seconds: 3),
+                  repeatForever: true,
+                  animatedTexts: [
+                    TypewriterAnimatedText('Bitcoin'),
+                    TypewriterAnimatedText('Ethereum'),
+                    TypewriterAnimatedText('Light Coin'),
+                  ],
+                  onTap: () {
+                    print("Tap Event");
+                  },
                 ),
               ),
             ),
@@ -281,11 +303,11 @@ class _CryptoState extends State<Crypto> with SingleTickerProviderStateMixin {
                 ),
               ),
             ),
-            const SizedBox(height: 113.0),
+            const SizedBox(height: 80.0),
             Column(
               children: [
                 Container(
-                  height: 102.0,
+                  height: 70.0,
                   alignment: Alignment.center,
                   padding: const EdgeInsets.only(bottom: 30.0),
                   child: androidDropdown(),

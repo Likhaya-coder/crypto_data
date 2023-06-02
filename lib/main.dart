@@ -5,5 +5,6 @@ void main() {
   runApp(MaterialApp(
     theme: ThemeData.dark(),
     home: Crypto(),
+    debugShowCheckedModeBanner: false,
   ));
 }

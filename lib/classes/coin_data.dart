@@ -53,31 +53,3 @@ class CoinData {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-// Future getData(currency) async {
-//   Map<String, String> cryptoPrices = {};
-//
-//   for(String crypto in cryptoList) {
-//     http.Response response = await http.get((Uri.parse('https://rest.coinapi.io/v1/exchangerate/$crypto/$currency?apikey=$apiKey')));
-//
-//     if (response.statusCode == 200) {
-//       Map data = jsonDecode(response.body);
-//       double coinRate = data['rate'];
-//       cryptoPrices[crypto] = coinRate.toStringAsFixed(0);
-//     } else {
-//       print(response.statusCode);
-//       throw('We could not get the data');
-//     }
-//   }
-//   return cryptoPrices;
-// }
